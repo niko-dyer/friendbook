@@ -1,2 +1,20 @@
-<h1>People#show</h1>
-<p>Find me in app/views/people/show.html.erb</p>
+<div class="ui card">
+    <div class="image">
+        <img src="https://robohash.org/<%= @person.avatar %>?set=set6" />
+    </div>
+    <div class="content">
+        <p class="header">
+            <%= @person.first_name %> <%= @person.last_name %>
+        </p>
+        <div class="meta">
+            <span class="date"><%= @person.phone %></span>
+        </div>
+        <div class="description">
+            <%= @person.email %>
+        </div>
+        <div class="extra content">
+            <%= link_to "Edit", edit_person_path(@person), class: "ui button blue" %> 
+            <%= link_to "Back", people_path, class: "ui button" %> 
+        </div>
+    </div>
+</div>

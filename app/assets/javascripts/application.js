@@ -11,5 +11,13 @@
 // about supported directives.
 //
 //= require rails-ujs
+//= require jquery
+//= require semantic-ui
 //= require activestorage
 //= require_tree .
+
+$(document).ready( function() {
+    $(document).on('click', '.image', function() {
+        $(this).transition('tada');
+    })
+})
